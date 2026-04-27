@@ -9,7 +9,7 @@ const projects = [
     title: "Robo-Soccer System",
     category: "High-Torque Robotic Systems",
     description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
-    image: "/projects/robo-soccer.jpg",
+    image: "/RedwanAhmmed/projects/robo-soccer.jpg",
     link: "#",
     position: "object-top"
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "LFR Motherboard",
     category: "PCB Design & Hardware Optimization",
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
-    image: "/projects/lfr-motherboard.png",
+    image: "/RedwanAhmmed/projects/lfr-motherboard.png",
     link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all",
     position: "object-center"
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "EasyEDA Initiative",
     category: "PCB Design Standards Advocacy",
     description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
-    image: "/projects/easyeda-initiative.jpg",
+    image: "/RedwanAhmmed/projects/easyeda-initiative.jpg",
     link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
     position: "object-top"
   },
@@ -164,7 +164,7 @@ export default function Work() {
               className="font-syne text-[clamp(30px,5vw,64px)] font-normal text-white leading-[1.1] mb-6"
             >
               Awards & <br />
-              <span className="bg-white text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1">Recognition</span>
+              <span className="bg-accent text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Recognition</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, x: -20 }}
