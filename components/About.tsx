@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section id="about" className="py-[80px] md:py-[120px] px-6 bg-[#0A0A0A] relative z-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-32 items-center">
-        
+
         {/* Left Side: Image */}
         <div className="w-full lg:w-1/2 relative order-2 lg:order-1">
           <div className="relative inline-block w-full">
@@ -28,9 +28,9 @@ export default function About() {
                 className="object-cover grayscale brightness-75 contrast-125"
               />
             </motion.div>
-            
+
             {/* Badge - Positioned to overlap the corner */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.5, rotate: -45 }}
               whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -56,7 +56,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-syne text-[clamp(36px,8vw,80px)] font-normal text-white leading-[1.1] tracking-[-0.03em] mb-8 md:mb-12"
           >
-            About <span className="bg-white text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-1">Me</span>
+            About <span className="bg-accent text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Me</span>
           </motion.h2>
 
           <motion.div

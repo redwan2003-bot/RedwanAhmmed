@@ -5,33 +5,33 @@ import Link from "next/link";
 import { ArrowUpRight, Trophy, Award, Medal } from "lucide-react";
 
 const projects = [
-  { 
-    title: "Robo-Soccer System", 
-    category: "High-Torque Robotic Systems", 
+  {
+    title: "Robo-Soccer System",
+    category: "High-Torque Robotic Systems",
     description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
     image: "/projects/robo-soccer.jpg",
     link: "#",
     position: "object-top"
   },
-  { 
-    title: "LFR Motherboard", 
-    category: "PCB Design & Hardware Optimization", 
+  {
+    title: "LFR Motherboard",
+    category: "PCB Design & Hardware Optimization",
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
     image: "/projects/lfr-motherboard.png",
     link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all",
     position: "object-center"
   },
-  { 
-    title: "EasyEDA Initiative", 
-    category: "PCB Design Standards Advocacy", 
+  {
+    title: "EasyEDA Initiative",
+    category: "PCB Design Standards Advocacy",
     description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
     image: "/projects/easyeda-initiative.jpg",
     link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
     position: "object-top"
   },
-  { 
-    title: "UIU Robotics Backend", 
-    category: "Scalable Logic & System Arch", 
+  {
+    title: "UIU Robotics Backend",
+    category: "Scalable Logic & System Arch",
     description: "Architecting robust backend systems for club-wide software projects, ensuring seamless code-to-hardware integration.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
@@ -101,11 +101,11 @@ export default function Work() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.1] tracking-[-0.03em]"
           >
-            Selected <span className="bg-white text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1">Work</span>
+            Selected <span className="bg-accent text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Work</span>
           </motion.h2>
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-32"
           variants={containerVariants}
           initial="hidden"
@@ -113,21 +113,21 @@ export default function Work() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {projects.map((project, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               variants={itemVariants}
               className="h-full"
             >
-              <a 
-                href={project.link} 
-                target="_blank" 
+              <a
+                href={project.link}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="group relative flex flex-col gap-6 p-6 rounded-[32px] bg-white/[0.02] border border-white/10 backdrop-blur-xl hover:bg-white/[0.04] hover:shadow-[0_0_80px_-20px_rgba(255,255,255,0.1)] hover:border-white/20 transition-all duration-500 will-change-transform hover:-translate-y-2 cursor-pointer h-full"
               >
                 <div className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-[#111]">
-                  <Image 
-                    src={project.image} 
-                    alt={project.title} 
+                  <Image
+                    src={project.image}
+                    alt={project.title}
                     fill
                     unoptimized
                     className="object-contain w-full h-full opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
@@ -143,7 +143,7 @@ export default function Work() {
                     </p>
                   </div>
 
-                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-white/5 border border-white/10 group-hover:bg-accent group-hover:border-accent group-hover:text-[#0A0A0A] transition-all text-white self-start mt-1">
+                  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-white/5 border border-white/10 group-hover:bg-accent group-hover:border-accent group-hover:text-[#0A0A0A] transition-all text-white self-start mt-1 group-hover:shadow-[0_0_15px_rgba(239,255,0,0.5)]">
                     <ArrowUpRight size={20} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </div>
                 </div>
@@ -193,11 +193,11 @@ export default function Work() {
                   <div className={`absolute inset-0 bg-current blur-2xl opacity-0 group-hover:opacity-20 transition-opacity`} />
                   {award.icon}
                 </div>
-                
+
                 <h3 className="font-syne text-[18px] font-bold text-white mb-6 leading-tight">
                   {award.title}
                 </h3>
-                
+
                 <div className="mt-auto">
                   <div className="font-inter text-[10px] text-[#555] uppercase tracking-[0.2em] font-bold leading-relaxed">
                     Issued by {award.issuer}

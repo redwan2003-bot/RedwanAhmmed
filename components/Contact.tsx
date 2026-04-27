@@ -11,10 +11,10 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { y: 40, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1, 
-    transition: { duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] } 
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }
   }
 };
 
@@ -36,22 +36,22 @@ export default function Contact() {
         viewport={{ once: true, margin: "-100px" }}
         className="max-w-4xl mx-auto flex flex-col items-center"
       >
-        <motion.h2 
-          variants={childVariants} 
+        <motion.h2
+          variants={childVariants}
           className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.1] mb-8 md:mb-10"
         >
-          Let&apos;s Work <span className="bg-white text-black px-4 py-0.5 md:px-6 md:py-1 rounded-sm font-bold inline-block transform -translate-y-2">Together</span>
+          Let&apos;s Work <span className="bg-accent text-black px-4 py-0.5 md:px-6 md:py-1 rounded-sm font-bold inline-block transform -translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Together</span>
         </motion.h2>
 
-        <motion.p 
-          variants={childVariants} 
+        <motion.p
+          variants={childVariants}
           className="font-inter text-[16px] md:text-[18px] text-[#888] max-w-[650px] mx-auto leading-relaxed mb-12 md:mb-16"
         >
           Currently open to senior/lead full-stack roles in UAE or India. Whether you have an enterprise project or a creative vision to bring to life, I&apos;d love to hear from you.
         </motion.p>
 
         <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-5 justify-center">
-          <a 
+          <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=reah30244@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export default function Contact() {
             SEND A MESSAGE
             <ArrowRight size={18} className="group-hover:translate-x-1.5 transition-transform duration-300" />
           </a>
-          <a 
+          <a
             href="/resume.pdf"
             download
             className="flex items-center justify-center gap-3 border border-white/10 bg-white/5 text-white px-10 py-5 rounded-full font-inter text-[14px] font-bold hover:bg-white/10 transition-all duration-500"

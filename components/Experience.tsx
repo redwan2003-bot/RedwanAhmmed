@@ -77,7 +77,7 @@ export default function Experience() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-syne text-[clamp(32px,7vw,80px)] font-normal text-white leading-tight mb-8 text-center"
           >
-            Professional <span className="bg-white text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-2">Experience</span>
+            Professional <span className="bg-accent text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Experience</span>
           </motion.h2>
 
           <motion.div
