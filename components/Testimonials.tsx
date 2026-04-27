@@ -38,24 +38,24 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="relative w-full max-w-[100vw] mt-16">
+      <div className="relative w-full mt-16">
         <div className="group flex w-full overflow-hidden"
              style={{
-               maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
-               WebkitMaskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)"
+               maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+               WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)"
              }}
         >
-          <div className="flex w-[200%] md:w-auto shrink-0 animate-marquee-test gap-[24px] px-4 hover:[animation-play-state:paused]">
-            {[...row, ...row].map((test, i) => (
+          <div className="flex animate-marquee-test gap-6 px-4 hover:[animation-play-state:paused]">
+            {[...testimonials, ...testimonials, ...testimonials].map((test, i) => (
               <div 
                 key={i}
-                className="relative w-[300px] md:w-[420px] shrink-0 bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-[12px] p-8 md:p-[40px] flex flex-col justify-between"
+                className="relative w-[280px] sm:w-[350px] md:w-[420px] shrink-0 bg-white/[0.03] border border-white/[0.08] rounded-2xl p-8 md:p-[40px] flex flex-col justify-between"
               >
-                <div className="absolute top-4 left-8 font-syne text-[80px] text-[rgba(255,255,255,0.06)] leading-none">
+                <div className="absolute top-4 left-8 font-syne text-[60px] md:text-[80px] text-white/[0.06] leading-none">
                   &quot;
                 </div>
                 
-                <p className="font-inter text-[16px] text-[#ccc] leading-[1.8] mb-[32px] relative z-10">
+                <p className="font-inter text-[14px] md:text-[16px] text-[#ccc] leading-[1.8] mb-[32px] relative z-10">
                   {test.quote}
                 </p>
                 
