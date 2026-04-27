@@ -54,9 +54,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-syne text-[clamp(36px,8vw,80px)] font-normal text-white leading-[1.1] tracking-[-0.03em] mb-8 md:mb-12"
+            className="font-syne text-[clamp(36px,8vw,80px)] font-normal text-white leading-[1.2] tracking-[-0.03em] mb-8 md:mb-12"
           >
-            About <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Me</span>
+            About <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform md:-translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Me</span>
           </motion.h2>
 
           <motion.div

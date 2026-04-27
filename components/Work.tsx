@@ -99,9 +99,9 @@ export default function Work() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.1] tracking-[-0.03em]"
+            className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.2] tracking-[-0.03em]"
           >
-            Selected <span className="bg-accent text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Work</span>
+            Selected <span className="bg-accent text-black px-4 py-0.5 md:px-4 md:py-0.5 rounded-sm font-bold inline-block transform md:-translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Work</span>
           </motion.h2>
         </div>
 

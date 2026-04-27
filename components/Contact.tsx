@@ -38,9 +38,9 @@ export default function Contact() {
       >
         <motion.h2
           variants={childVariants}
-          className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.1] mb-8 md:mb-10"
+          className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.2] mb-8 md:mb-10"
         >
-          Let&apos;s Work <span className="bg-accent text-black px-4 py-0.5 md:px-6 md:py-1 rounded-sm font-bold inline-block transform -translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Together</span>
+          Let&apos;s Work <span className="bg-accent text-black px-4 py-0.5 md:px-6 md:py-1 rounded-sm font-bold inline-block transform md:-translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Together</span>
         </motion.h2>
 
         <motion.p

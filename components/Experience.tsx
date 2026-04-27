@@ -75,9 +75,9 @@ export default function Experience() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-syne text-[clamp(32px,7vw,80px)] font-normal text-white leading-tight mb-8 text-center"
+            className="font-syne text-[clamp(32px,7vw,80px)] font-normal text-white leading-[1.2] mb-8 text-center"
           >
-            Professional <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform -translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Experience</span>
+            Professional <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform md:-translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Experience</span>
           </motion.h2>
 
           <motion.div
