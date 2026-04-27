@@ -6,11 +6,25 @@ import { ArrowUpRight, Trophy, Award, Medal } from "lucide-react";
 
 const projects = [
   { 
+    title: "Robo-Soccer System", 
+    category: "High-Torque Robotic Systems", 
+    description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
+    image: "/projects/robo-soccer.jpg",
+    link: "#"
+  },
+  { 
     title: "LFR Motherboard", 
     category: "PCB Design & Hardware Optimization", 
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/lfr-motherboard.png",
     link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all"
+  },
+  { 
+    title: "EasyEDA Initiative", 
+    category: "PCB Design Standards Advocacy", 
+    description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
+    image: "/projects/easyeda-initiative.jpg",
+    link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs"
   },
   { 
     title: "UIU Robotics Backend", 
@@ -18,20 +32,6 @@ const projects = [
     description: "Architecting robust backend systems for club-wide software projects, ensuring seamless code-to-hardware integration.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
     link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs"
-  },
-  { 
-    title: "Robo-Soccer System", 
-    category: "High-Torque Robotic Systems", 
-    description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
-    image: "https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=800",
-    link: "#"
-  },
-  { 
-    title: "EasyEDA Initiative", 
-    category: "PCB Design Standards Advocacy", 
-    description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-    link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs"
   }
 ];
 
