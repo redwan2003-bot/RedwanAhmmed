@@ -50,7 +50,7 @@ export default function Contact() {
           Currently open to senior/lead full-stack roles in UAE or India. Whether you have an enterprise project or a creative vision to bring to life, I&apos;d love to hear from you.
         </motion.p>
 
-        <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-5 justify-center">
+        <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=reah30244@gmail.com"
             target="_blank"

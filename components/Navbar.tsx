@@ -152,9 +152,9 @@ export default function Navbar({ isLoaded }: NavbarProps) {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[105] bg-[#0A0A0A] flex flex-col p-12 justify-center"
+            className="fixed inset-0 z-[105] bg-[#0A0A0A] flex flex-col p-8 md:p-12 justify-center pt-32 md:pt-12"
           >
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4 md:gap-6">
               {navLinks.map((item, i) => {
                 const id = item.toLowerCase();
                 return (
@@ -167,7 +167,7 @@ export default function Navbar({ isLoaded }: NavbarProps) {
                     <Link
                       href={`#${id}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="font-syne text-[56px] font-[800] text-white hover:text-accent transition-colors leading-none"
+                      className="font-syne text-[clamp(32px,12vw,48px)] font-[800] text-white hover:text-accent transition-colors leading-[1.1] tracking-tighter"
                     >
                       {item}
                     </Link>

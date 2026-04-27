@@ -56,7 +56,7 @@ export default function About() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-syne text-[clamp(36px,8vw,80px)] font-normal text-white leading-[1.1] tracking-[-0.03em] mb-8 md:mb-12"
           >
-            About <span className="bg-accent text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Me</span>
+            About <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Me</span>
           </motion.h2>
 
           <motion.div
@@ -88,18 +88,18 @@ export default function About() {
             className="flex gap-16 md:gap-24"
           >
             <div className="flex flex-col">
-              <div className="font-syne text-[64px] font-[800] text-white leading-none mb-4">
+              <div className="font-syne text-[48px] md:text-[64px] font-[800] text-white leading-none mb-2 md:mb-4">
                 <span ref={yearsExp.ref}>{yearsExp.count}</span>+
               </div>
-              <div className="font-inter text-[11px] text-white/40 uppercase tracking-[0.2em] font-bold">
+              <div className="font-inter text-[10px] md:text-[11px] text-white/40 uppercase tracking-[0.2em] font-bold">
                 Years Experience
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="font-syne text-[64px] font-[800] text-blue-500 leading-none mb-4">
+              <div className="font-syne text-[48px] md:text-[64px] font-[800] text-blue-500 leading-none mb-2 md:mb-4">
                 <span ref={awardsCount.ref}>{awardsCount.count}</span>
               </div>
-              <div className="font-inter text-[11px] text-white/40 uppercase tracking-[0.2em] font-bold">
+              <div className="font-inter text-[10px] md:text-[11px] text-white/40 uppercase tracking-[0.2em] font-bold">
                 Major Honors
               </div>
             </div>

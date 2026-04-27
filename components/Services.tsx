@@ -56,7 +56,7 @@ export default function Services() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2 className="font-syne text-[clamp(40px,10vw,120px)] font-medium text-white leading-[1.1] tracking-[-0.03em] mb-8">
-              What I <span className="bg-accent text-black px-5 py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Do</span>
+              What I <span className="bg-accent text-black px-4 py-0.5 md:px-5 md:py-1 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Do</span>
             </h2>
           </motion.div>
 
