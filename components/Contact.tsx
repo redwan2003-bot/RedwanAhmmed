@@ -52,7 +52,9 @@ export default function Contact() {
 
         <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-5 justify-center">
           <a 
-            href="mailto:reah30244@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=reah30244@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 bg-white text-[#0A0A0A] px-10 py-5 rounded-full font-inter text-[14px] font-bold hover:bg-accent transition-all duration-500 group"
           >
             <Mail size={18} />
