@@ -124,13 +124,13 @@ export default function Work() {
                 rel="noopener noreferrer"
                 className="group relative flex flex-col gap-6 p-6 rounded-[32px] bg-white/[0.02] border border-white/10 backdrop-blur-xl hover:bg-white/[0.04] hover:shadow-[0_0_80px_-20px_rgba(255,255,255,0.1)] hover:border-white/20 transition-all duration-500 will-change-transform hover:-translate-y-2 cursor-pointer h-full"
               >
-                <div className="relative w-full aspect-[4/5] md:aspect-[3/2] rounded-2xl overflow-hidden bg-black/50">
+                <div className="relative w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-[#111]">
                   <Image 
                     src={project.image} 
                     alt={project.title} 
                     fill
                     unoptimized
-                    className={`object-cover ${project.position} w-full h-full opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]`}
+                    className="object-contain w-full h-full opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
                   />
                 </div>
 
