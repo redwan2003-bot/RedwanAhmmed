@@ -94,10 +94,10 @@ export default function Experience() {
         </div>
 
         <div className="relative max-w-4xl mx-auto" ref={containerRef} style={{ position: "relative" }}>
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-[1px] bg-white/10" />
+          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-[1px] bg-white/5" />
 
           <motion.div
-            className="absolute left-0 md:left-8 top-0 bottom-0 w-[1px] bg-white origin-top"
+            className="absolute left-0 md:left-8 top-0 bottom-0 w-[1.5px] bg-gradient-to-b from-emerald-400 via-emerald-500 to-cyan-400 origin-top shadow-[0_0_15px_rgba(52,211,153,0.3)]"
             style={{ scaleY }}
           />
 
@@ -110,7 +110,7 @@ export default function Experience() {
           >
             {jobs.map((job, idx) => (
               <motion.div key={idx} variants={itemVariants} className="relative pl-10 md:pl-28 group">
-                <div className="absolute left-[-6px] md:left-[26px] top-12 w-[13px] h-[13px] rounded-full bg-[#0A0A0A] border-2 border-white/20 group-hover:border-white group-hover:bg-white transition-all duration-500 z-10" />
+                <div className="absolute left-[-6px] md:left-[26px] top-12 w-[13px] h-[13px] rounded-full bg-[#0A0A0A] border-2 border-emerald-500/30 group-hover:border-emerald-400 group-hover:bg-emerald-400 group-hover:shadow-[0_0_15px_rgba(52,211,153,0.8)] transition-all duration-500 z-10" />
 
                 <div className="p-6 md:p-10 rounded-[2rem] bg-white/[0.01] border border-white/[0.05] hover:bg-white/[0.03] hover:border-white/10 transition-all duration-500 backdrop-blur-md relative overflow-hidden cursor-pointer">
                   <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/0 to-transparent group-hover:via-white/50 transition-all duration-700" />
