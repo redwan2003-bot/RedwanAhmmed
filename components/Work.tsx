@@ -10,28 +10,32 @@ const projects = [
     category: "High-Torque Robotic Systems", 
     description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
     image: "/projects/robo-soccer.jpg",
-    link: "#"
+    link: "#",
+    position: "object-top"
   },
   { 
     title: "LFR Motherboard", 
     category: "PCB Design & Hardware Optimization", 
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
     image: "/projects/lfr-motherboard.png",
-    link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all"
+    link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all",
+    position: "object-center"
   },
   { 
     title: "EasyEDA Initiative", 
     category: "PCB Design Standards Advocacy", 
     description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
     image: "/projects/easyeda-initiative.jpg",
-    link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs"
+    link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
+    position: "object-top"
   },
   { 
     title: "UIU Robotics Backend", 
     category: "Scalable Logic & System Arch", 
     description: "Architecting robust backend systems for club-wide software projects, ensuring seamless code-to-hardware integration.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-    link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs"
+    link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
+    position: "object-center"
   }
 ];
 
@@ -120,13 +124,13 @@ export default function Work() {
                 rel="noopener noreferrer"
                 className="group relative flex flex-col gap-6 p-6 rounded-[32px] bg-white/[0.02] border border-white/10 backdrop-blur-xl hover:bg-white/[0.04] hover:shadow-[0_0_80px_-20px_rgba(255,255,255,0.1)] hover:border-white/20 transition-all duration-500 will-change-transform hover:-translate-y-2 cursor-pointer h-full"
               >
-                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-black/50">
+                <div className="relative w-full aspect-[4/5] md:aspect-[3/2] rounded-2xl overflow-hidden bg-black/50">
                   <Image 
                     src={project.image} 
                     alt={project.title} 
                     fill
                     unoptimized
-                    className="object-cover w-full h-full opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]"
+                    className={`object-cover ${project.position} w-full h-full opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.33,1,0.68,1)]`}
                   />
                 </div>
 
