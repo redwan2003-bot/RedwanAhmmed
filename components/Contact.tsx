@@ -28,7 +28,7 @@ export default function Contact() {
   const childVariants = shouldReduceMotion ? reducedItemVariants : itemVariants;
 
   return (
-    <section id="contact" className="py-[80px] md:py-[160px] text-center bg-[#0A0A0A] relative z-20 px-6">
+    <section id="contact" className="py-[80px] md:py-[160px] text-center bg-transparent relative z-20 px-6">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -45,9 +45,9 @@ export default function Contact() {
 
         <motion.p
           variants={childVariants}
-          className="font-inter text-[16px] md:text-[18px] text-[#888] max-w-[650px] mx-auto leading-relaxed mb-12 md:mb-16"
+          className="font-inter text-[16px] md:text-[18px] text-[#888] max-w-5xl mx-auto leading-relaxed mb-12 md:mb-16 text-center md:whitespace-nowrap"
         >
-          Currently open to senior/lead full-stack roles in UAE or India. Whether you have an enterprise project or a creative vision to bring to life, I&apos;d love to hear from you.
+          Currently open to collaborating on Robotics R&D, Backend architectures, or Hardware engineering projects.
         </motion.p>
 
         <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center">

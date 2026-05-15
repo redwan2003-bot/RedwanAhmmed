@@ -10,13 +10,6 @@ export default function CustomCursor() {
   const mouseX = useMotionValue(-100);
   const mouseY = useMotionValue(-100);
 
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 20 });
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 20 });
-
-  // Offset by half of size to center them
-  const ringX = useTransform(springX, val => val - 16);
-  const ringY = useTransform(springY, val => val - 16);
-  
   const dotX = useTransform(mouseX, val => val - 4);
   const dotY = useTransform(mouseY, val => val - 4);
 
@@ -66,23 +59,6 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Ring */}
-      <motion.div
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-[9998]"
-        style={{
-          width: 32,
-          height: 32,
-          border: "1px solid rgba(255,255,255,0.4)",
-          x: ringX,
-          y: ringY,
-        }}
-        animate={{
-          scale: isHovering ? 2.5 : 1,
-          backgroundColor: isHovering ? "rgba(239, 255, 0, 0.15)" : "rgba(239, 255, 0, 0)",
-          borderColor: isHovering ? "rgba(239, 255, 0, 0)" : "rgba(255,255,255,0.4)"
-        }}
-        transition={{ scale: { duration: 0.2 }, backgroundColor: { duration: 0.2 } }}
-      />
       {/* Dot */}
       <motion.div
         className="fixed top-0 left-0 rounded-full bg-accent pointer-events-none z-[9999]"

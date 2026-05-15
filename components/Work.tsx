@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Trophy, Award, Medal } from "lucide-react";
+import RevealOnScroll from "./RevealOnScroll";
+import ImageSlideshow from "./ImageSlideshow";
 
 const projects = [
   {
     title: "Robo-Soccer System",
     category: "High-Torque Robotic Systems",
     description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
-    image: "/RedwanAhmmed/projects/robo-soccer.jpg",
+    image: "/projects/robo-soccer.jpg",
     link: "#",
     position: "object-top"
   },
@@ -17,7 +19,7 @@ const projects = [
     title: "LFR Motherboard",
     category: "PCB Design & Hardware Optimization",
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
-    image: "/RedwanAhmmed/projects/lfr-motherboard.png",
+    image: "/projects/lfr-motherboard.png",
     link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all",
     position: "object-center"
   },
@@ -25,7 +27,7 @@ const projects = [
     title: "EasyEDA Initiative",
     category: "PCB Design Standards Advocacy",
     description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
-    image: "/RedwanAhmmed/projects/easyeda-initiative.jpg",
+    image: "/projects/easyeda-initiative.jpg",
     link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
     position: "object-top"
   },
@@ -33,9 +35,9 @@ const projects = [
     title: "UIU Robotics Backend",
     category: "Scalable Logic & System Arch",
     description: "Architecting robust backend systems for club-wide software projects, ensuring seamless code-to-hardware integration.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/uiu-robotics-backend.jpg",
     link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
-    position: "object-center"
+    position: "object-top"
   }
 ];
 
@@ -91,33 +93,19 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="py-[80px] md:py-[160px] px-6 bg-[#0A0A0A] relative z-20">
+    <section id="work" className="py-[80px] md:py-[160px] px-6 bg-transparent relative z-20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 md:mb-24">
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.2] tracking-[-0.03em]"
-          >
-            Selected <span className="bg-accent text-black px-4 py-0.5 md:px-4 md:py-0.5 rounded-sm font-bold inline-block transform md:-translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Work</span>
-          </motion.h2>
+          <RevealOnScroll>
+            <h2 className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.2] tracking-[-0.03em]">
+              Selected <span className="bg-accent text-black px-4 py-0.5 md:px-4 md:py-0.5 rounded-sm font-bold inline-block transform md:-translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Work</span>
+            </h2>
+          </RevealOnScroll>
         </div>
 
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-32"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-16 md:mb-32">
           {projects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              variants={itemVariants}
-              className="h-full"
-            >
+            <RevealOnScroll key={idx} delay={idx * 0.1}>
               <a
                 href={project.link}
                 target="_blank"
@@ -148,63 +136,50 @@ export default function Work() {
                   </div>
                 </div>
               </a>
-            </motion.div>
+            </RevealOnScroll>
           ))}
-        </motion.div>
+        </div>
 
         {/* Awards Subsection */}
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Left Side: Title & Info */}
           <div className="lg:w-1/3">
-            <motion.h2
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="font-syne text-[clamp(30px,5vw,64px)] font-normal text-white leading-[1.1] mb-6"
-            >
-              Awards & <br />
-              <span className="bg-accent text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Recognition</span>
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="font-inter text-[#888] text-lg max-w-[320px] leading-relaxed"
-            >
-              Honors received for engineering excellence and scientific research.
-            </motion.p>
+            <RevealOnScroll>
+              <h2 className="font-syne text-[clamp(30px,5vw,64px)] font-normal text-white leading-[1.1] mb-6">
+                Awards & <br />
+                <span className="bg-accent text-black px-4 py-0.5 rounded-sm font-bold inline-block transform -translate-y-1 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Recognition</span>
+              </h2>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.1}>
+              <p className="font-inter text-[#888] text-lg max-w-[320px] leading-relaxed">
+                Honors received for engineering excellence and scientific research.
+              </p>
+            </RevealOnScroll>
           </div>
 
           {/* Right Side: Award Cards */}
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6">
             {awards.map((award, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative p-8 rounded-[32px] bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500 flex flex-col items-center text-center h-full"
-              >
-                {/* Icon with Glow */}
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500">
-                  <div className={`absolute inset-0 bg-current blur-2xl opacity-0 group-hover:opacity-20 transition-opacity`} />
-                  {award.icon}
-                </div>
+              <RevealOnScroll key={i} delay={i * 0.1}>
+                <div className="group relative p-8 rounded-[32px] bg-white/[0.03] border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500 flex flex-col items-center text-center h-full">
+                  {/* Icon with Glow */}
+                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                    <div className={`absolute inset-0 bg-current blur-2xl opacity-0 group-hover:opacity-20 transition-opacity`} />
+                    {award.icon}
+                  </div>
 
-                <h3 className="font-syne text-[18px] font-bold text-white mb-6 leading-tight">
-                  {award.title}
-                </h3>
+                  <h3 className="font-syne text-[18px] font-bold text-white mb-6 leading-tight">
+                    {award.title}
+                  </h3>
 
-                <div className="mt-auto">
-                  <div className="font-inter text-[10px] text-[#555] uppercase tracking-[0.2em] font-bold leading-relaxed">
-                    Issued by {award.issuer}
-                    {award.year && <><br />{award.year}</>}
+                  <div className="mt-auto">
+                    <div className="font-inter text-[10px] text-[#555] uppercase tracking-[0.2em] font-bold leading-relaxed">
+                      Issued by {award.issuer}
+                      {award.year && <><br />{award.year}</>}
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>

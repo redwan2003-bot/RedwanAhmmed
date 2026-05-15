@@ -16,7 +16,7 @@ export function useImageSequence(frameCount: number, containerRef?: React.RefObj
     for (let i = 1; i <= frameCount; i++) {
       const img = new Image();
       const paddedIndex = i.toString().padStart(3, "0");
-      img.src = `/RedwanAhmmed/sequence/ezgif-frame-${paddedIndex}.jpg`;
+      img.src = `/sequence/ezgif-frame-${paddedIndex}.jpg`;
       loadedImages.push(img);
     }
     setImages(loadedImages);

@@ -1,5 +1,6 @@
 "use client";
 import { motion, useScroll, useSpring } from "framer-motion";
+import InteractiveGrid from "./InteractiveGrid";
 
 export default function GlobalEffects() {
   const { scrollYProgress } = useScroll();
@@ -11,6 +12,7 @@ export default function GlobalEffects() {
 
   return (
     <>
+      <InteractiveGrid />
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-indigo-500 via-emerald-500 to-sky-500 origin-left z-[1000] shadow-[0_0_10px_rgba(129,140,248,0.8)]"
