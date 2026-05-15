@@ -72,7 +72,7 @@ export default function Navbar({ isLoaded }: NavbarProps) {
         className="fixed top-0 left-0 right-0 z-[1000] px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference bg-transparent"
       >
         {/* Left: Logo */}
-        <Link href={`${BASE_PATH}/`} className="group flex items-center gap-2">
+        <Link href="/" className="group flex items-center gap-2">
           <span className="font-syne text-[22px] font-[800] text-white tracking-[-0.04em] uppercase">
             Redwan_Ahmmed
           </span>
