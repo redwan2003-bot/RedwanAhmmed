@@ -1,4 +1,5 @@
 "use client";
+import { BASE_PATH } from "@/lib/utils";
 
 const techList = [
   "ESP32", "C++", "PCB Design", "EasyEDA", "PSXLib", "FreeRTOS",
@@ -36,7 +37,7 @@ export default function TechMarquee() {
                   className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
                 >
                   <img 
-                    src={`/RedwanAhmmed/icons/${iconName}.svg`} 
+                    src={`${BASE_PATH}/icons/${iconName}.svg`} 
                     alt="" 
                     className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
                     onError={(e) => (e.currentTarget.style.display = 'none')}
@@ -61,7 +62,7 @@ export default function TechMarquee() {
                   className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
                 >
                   <img 
-                    src={`/RedwanAhmmed/icons/${iconName}.svg`} 
+                    src={`${BASE_PATH}/icons/${iconName}.svg`} 
                     alt="" 
                     className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
                     onError={(e) => (e.currentTarget.style.display = 'none')}

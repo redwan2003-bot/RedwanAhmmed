@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { Github, Linkedin, FileText } from "lucide-react";
 
+import { BASE_PATH } from "@/lib/utils";
+
 interface NavbarProps {
   isLoaded: boolean;
 }
@@ -70,7 +72,7 @@ export default function Navbar({ isLoaded }: NavbarProps) {
         className="fixed top-0 left-0 right-0 z-[1000] px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference bg-transparent"
       >
         {/* Left: Logo */}
-        <Link href="/RedwanAhmmed/" className="group flex items-center gap-2">
+        <Link href={`${BASE_PATH}/`} className="group flex items-center gap-2">
           <span className="font-syne text-[22px] font-[800] text-white tracking-[-0.04em] uppercase">
             Redwan_Ahmmed
           </span>
@@ -99,7 +101,7 @@ export default function Navbar({ isLoaded }: NavbarProps) {
         {/* Right: Resume / Socials */}
         <div className="hidden md:flex items-center gap-6">
           <a
-            href="/RedwanAhmmed/resume.pdf"
+            href={`${BASE_PATH}/resume.pdf`}
             target="_blank"
             className="group relative flex items-center gap-2 px-6 py-2.5 bg-white text-black font-inter text-[13px] font-bold rounded-full overflow-hidden transition-transform active:scale-95"
           >

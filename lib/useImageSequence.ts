@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useScroll, useTransform, MotionValue } from "framer-motion";
+import { BASE_PATH } from "./utils";
 
 export function useImageSequence(frameCount: number, containerRef?: React.RefObject<HTMLElement>) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -16,7 +17,7 @@ export function useImageSequence(frameCount: number, containerRef?: React.RefObj
     for (let i = 1; i <= frameCount; i++) {
       const img = new Image();
       const paddedIndex = i.toString().padStart(3, "0");
-      img.src = `/RedwanAhmmed/sequence/ezgif-frame-${paddedIndex}.jpg`;
+      img.src = `${BASE_PATH}/sequence/ezgif-frame-${paddedIndex}.jpg`;
       loadedImages.push(img);
     }
     setImages(loadedImages);
