@@ -26,40 +26,50 @@ export default function TechMarquee() {
         {/* Row 1 */}
         <div className="group flex w-full">
           <div className="flex w-[200%] shrink-0 animate-marquee gap-4 px-2 hover:[animation-play-state:paused]">
-            {[...row1, ...row1].map((tech, i) => (
-              <div 
-                key={`r1-${i}`}
-                className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
-              >
-                <img 
-                  src={`/icons/${tech.toLowerCase().replace(" ", "").replace(".", "")}.svg`} 
-                  alt="" 
-                  className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
-                  onError={(e) => (e.currentTarget.style.display = 'none')}
-                />
-                {tech}
-              </div>
-            ))}
+            {[...row1, ...row1].map((tech, i) => {
+              let iconName = tech.toLowerCase().replace(" ", "").replace(".", "");
+              if (iconName === "c++") iconName = "cpp";
+              
+              return (
+                <div 
+                  key={`r1-${i}`}
+                  className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
+                >
+                  <img 
+                    src={`/RedwanAhmmed/icons/${iconName}.svg`} 
+                    alt="" 
+                    className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
+                    onError={(e) => (e.currentTarget.style.display = 'none')}
+                  />
+                  {tech}
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Row 2 */}
         <div className="group flex w-full">
           <div className="flex w-[200%] shrink-0 animate-marquee-reverse gap-4 px-2 hover:[animation-play-state:paused]">
-            {[...row2, ...row2].map((tech, i) => (
-              <div 
-                key={`r2-${i}`}
-                className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
-              >
-                <img 
-                  src={`/icons/${tech.toLowerCase().replace(" ", "").replace(".", "")}.svg`} 
-                  alt="" 
-                  className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
-                  onError={(e) => (e.currentTarget.style.display = 'none')}
-                />
-                {tech}
-              </div>
-            ))}
+            {[...row2, ...row2].map((tech, i) => {
+              let iconName = tech.toLowerCase().replace(" ", "").replace(".", "");
+              if (iconName === "c++") iconName = "cpp";
+
+              return (
+                <div 
+                  key={`r2-${i}`}
+                  className="flex items-center gap-3 border border-[rgba(255,255,255,0.1)] rounded-[999px] px-[24px] py-[10px] font-inter text-[15px] text-[#888] whitespace-nowrap bg-[rgba(255,255,255,0.02)] hover:bg-white/5 hover:text-white transition-all cursor-default"
+                >
+                  <img 
+                    src={`/RedwanAhmmed/icons/${iconName}.svg`} 
+                    alt="" 
+                    className="w-5 h-5 opacity-50 group-hover:opacity-100 transition-opacity"
+                    onError={(e) => (e.currentTarget.style.display = 'none')}
+                  />
+                  {tech}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

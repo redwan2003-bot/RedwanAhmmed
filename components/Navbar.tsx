@@ -70,7 +70,7 @@ export default function Navbar({ isLoaded }: NavbarProps) {
         className="fixed top-0 left-0 right-0 z-[1000] px-6 py-8 md:px-12 flex justify-between items-center mix-blend-difference bg-transparent"
       >
         {/* Left: Logo */}
-        <Link href="/" className="group flex items-center gap-2">
+        <Link href="/RedwanAhmmed/" className="group flex items-center gap-2">
           <span className="font-syne text-[22px] font-[800] text-white tracking-[-0.04em] uppercase">
             Redwan_Ahmmed
           </span>
@@ -98,15 +98,15 @@ export default function Navbar({ isLoaded }: NavbarProps) {
 
         {/* Right: Resume / Socials */}
         <div className="hidden md:flex items-center gap-6">
-          <Link
-            href="/resume.pdf"
+          <a
+            href="/RedwanAhmmed/resume.pdf"
             target="_blank"
             className="group relative flex items-center gap-2 px-6 py-2.5 bg-white text-black font-inter text-[13px] font-bold rounded-full overflow-hidden transition-transform active:scale-95"
           >
             <FileText size={16} className="relative z-10 group-hover:text-white transition-colors duration-300" />
             <span className="relative z-10 group-hover:text-white transition-colors duration-300">Resume</span>
             <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-          </Link>
+          </a>
 
           <div className="flex items-center gap-4">
             <a
