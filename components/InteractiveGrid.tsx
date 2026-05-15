@@ -39,10 +39,11 @@ const InteractiveGrid = () => {
     let h = (canvas.height = window.innerHeight);
     let mouse = { x: -1000, y: -1000 };
 
-    const gridSize = 65;
-    const repulsionRadius = 350;
-    const repulsionStrength = 35;
-    const springStiffness = 0.04;
+    const isMobile = w < 768;
+    const gridSize = isMobile ? 45 : 65;
+    const repulsionRadius = isMobile ? 150 : 350;
+    const repulsionStrength = isMobile ? 15 : 35;
+    const springStiffness = isMobile ? 0.06 : 0.04;
     const damping = 0.88;
 
     const initDots = () => {

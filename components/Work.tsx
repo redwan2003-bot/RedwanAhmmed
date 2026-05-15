@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Trophy, Award, Medal } from "lucide-react";
 import RevealOnScroll from "./RevealOnScroll";
-import ImageSlideshow from "./ImageSlideshow";
+import { BASE_PATH } from "@/lib/utils";
 
 const projects = [
   {
     title: "Robo-Soccer System",
     category: "High-Torque Robotic Systems",
     description: "Lead hardware engineering for national competitions, focusing on circuit integrity and mechanical durability.",
-    image: "/projects/robo-soccer.jpg",
+    image: `${BASE_PATH}/projects/robo-soccer.jpg`,
     link: "#",
     position: "object-top"
   },
@@ -19,7 +19,7 @@ const projects = [
     title: "LFR Motherboard",
     category: "PCB Design & Hardware Optimization",
     description: "Re-engineered PCB chassis motherboard for Line Following Robots, optimizing routing for high-speed stability.",
-    image: "/projects/lfr-motherboard.png",
+    image: `${BASE_PATH}/projects/lfr-motherboard.png`,
     link: "https://u.easyeda.com/account/user/projects/index/detail?project=21e142ba891447498fb8916465393517&listType=all",
     position: "object-center"
   },
@@ -27,7 +27,7 @@ const projects = [
     title: "EasyEDA Initiative",
     category: "PCB Design Standards Advocacy",
     description: "Promoting professional-grade PCB design standards (EasyEDA Pro) within the academic and maker community.",
-    image: "/projects/easyeda-initiative.jpg",
+    image: `${BASE_PATH}/projects/easyeda-initiative.jpg`,
     link: "https://www.linkedin.com/posts/redwanahmmed_iot-internetofthings-backenddevelopment-ugcPost-7451949636237307904-obNA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
     position: "object-top"
   },
@@ -35,7 +35,7 @@ const projects = [
     title: "UIU Robotics Backend",
     category: "Scalable Logic & System Arch",
     description: "Architecting robust backend systems for club-wide software projects, ensuring seamless code-to-hardware integration.",
-    image: "/projects/uiu-robotics-backend.jpg",
+    image: `${BASE_PATH}/projects/uiu-robotics-backend.jpg`,
     link: "https://www.linkedin.com/posts/redwanahmmed_uiuroboticsclub-hardwareengineering-backenddeveloper-share-7429914942876823553-13VC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPO8YEBrBvtk8cgoXFOa6yi9yyKJpxhXVs",
     position: "object-top"
   }
