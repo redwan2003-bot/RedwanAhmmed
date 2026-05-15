@@ -47,7 +47,7 @@ export default function Contact() {
           variants={childVariants}
           className="font-inter text-[15px] md:text-[18px] text-[#888] max-w-4xl mx-auto leading-relaxed mb-16 md:mb-20 text-center"
         >
-          Currently open to senior/lead full-stack roles in UAE or India. Whether you have an enterprise project or a creative vision to bring to life, I&apos;d love to hear from you.
+          Currently open to collaborating on cutting-edge Robotics R&D, sophisticated Backend architectures. Whether you have a complex system to build or a creative vision to bring to life, I&apos;d love to hear from you.
         </motion.p>
 
         <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-10 md:mb-0">
