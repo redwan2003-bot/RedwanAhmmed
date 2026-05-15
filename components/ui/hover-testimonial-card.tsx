@@ -117,10 +117,10 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
         />
         
         {/* Card content */}
-        <div className="relative z-10 p-8 md:p-12 aspect-video transition-colors duration-300 rounded-2xl flex flex-col justify-center">
+        <div className="relative z-10 p-6 md:p-12 min-h-[350px] md:aspect-video transition-colors duration-300 rounded-2xl flex flex-col justify-center">
           {/* Quote with blur animation */}
             <q className={cn(
-              'text-3xl md:text-5xl lg:text-6xl font-medium leading-11 md:leading-relaxed tracking-wide text-center text-foreground/95 mt-auto transition-all duration-500',
+              'text-xl md:text-5xl lg:text-6xl font-medium leading-relaxed tracking-wide text-center text-foreground/95 mt-auto transition-all duration-500',
               isAnimating ? 'blur-sm opacity-0 translate-y-4' : 'blur-0 opacity-100 translate-y-0'
             )}>
               {activeTestimonial.quote}
@@ -128,24 +128,24 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
 
           {/* Author Section with blur animation */}
           <div className={cn(
-            'flex items-center mt-auto justify-between transition-all duration-500',
+            'flex items-center mt-auto justify-between transition-all duration-500 gap-4',
             isAnimating ? 'blur-sm opacity-0 translate-y-4' : 'blur-0 opacity-100 translate-y-0'
           )}>
-            <div className="flex items-center gap-4">
-              <Avatar className="h-14 w-14 border-2 border-primary/20 rounded-lg shadow-xs shadow-white/50 transition-all duration-300 group-hover:border-accent/40">
+            <div className="flex items-center gap-3 md:gap-4">
+              <Avatar className="h-10 w-10 md:h-14 md:w-14 border-2 border-primary/20 rounded-lg shadow-xs shadow-white/50 transition-all duration-300 group-hover:border-accent/40">
                 <AvatarImage src={activeTestimonial.author.avatar} alt={activeTestimonial.author.name} />
-                <AvatarFallback className="bg-muted text-muted-foreground font-semibold text-lg">
+                <AvatarFallback className="bg-muted text-muted-foreground font-semibold text-base md:text-lg">
                   {activeTestimonial.author.initials || 
                    activeTestimonial.author.name.split(' ').map(n => n[0]).join('').toUpperCase()}
                 </AvatarFallback>
               </Avatar>
               
-              <div>
-                <div className="font-semibold text-foreground text-lg">
+              <div className="min-w-0">
+                <div className="font-semibold text-foreground text-sm md:text-lg truncate">
                   {activeTestimonial.author.name}
                 </div>
                 {activeTestimonial.author.title && (
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                  <div className="text-[10px] md:text-sm text-muted-foreground uppercase tracking-wider truncate">
                     {activeTestimonial.author.title}
                   </div>
                 )}
@@ -154,15 +154,15 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
 
             {/* Company */}
             {activeTestimonial.company && (
-              <div className="flex items-center gap-2 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="flex items-center gap-2 opacity-70 transition-opacity duration-300 group-hover:opacity-100 shrink-0">
                 {activeTestimonial.company.logo ? (
                   <img 
                     src={activeTestimonial.company.logo} 
                     alt={activeTestimonial.company.name}
-                    className="h-8 w-auto"
+                    className="h-6 md:h-8 w-auto"
                   />
                 ) : (
-                  <div className="text-lg font-bold text-foreground/70 tracking-wider">
+                  <div className="text-sm md:text-lg font-bold text-foreground/70 tracking-wider">
                     {activeTestimonial.company.name}
                   </div>
                 )}
@@ -174,7 +174,7 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
 
       {/* Supporters Grid */}
       <div className="space-y-4">
-        <div className="grid grid-cols-8 sm:grid-cols-12 md:grid-cols-16 gap-2 md:gap-4">
+        <div className="grid grid-cols-6 sm:grid-cols-12 md:grid-cols-16 gap-2 md:gap-4">
           {testimonials.map((testimonial, index) => {
             const isActive = index === activeIndex;
             return (
@@ -199,8 +199,8 @@ export const TestimonialShowcase: React.FC<TestimonialShowcaseProps> = ({
                   </AvatarFallback>
                 </Avatar>
                 
-                {/* Hover tooltip */}
-                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-popover text-popover-foreground text-xs px-2 py-1 rounded opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20 border shadow-lg">
+                {/* Hover tooltip - hidden on mobile */}
+                <div className="hidden md:block absolute -top-10 left-1/2 transform -translate-x-1/2 bg-popover text-popover-foreground text-xs px-2 py-1 rounded opacity-0 group-hover/avatar:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20 border shadow-lg">
                   {testimonial.author.name}
                 </div>
               </button>

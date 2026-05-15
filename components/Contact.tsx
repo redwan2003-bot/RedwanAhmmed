@@ -28,7 +28,7 @@ export default function Contact() {
   const childVariants = shouldReduceMotion ? reducedItemVariants : itemVariants;
 
   return (
-    <section id="contact" className="py-[80px] md:py-[160px] text-center bg-transparent relative z-20 px-6">
+    <section id="contact" className="py-[120px] md:py-[200px] text-center bg-transparent relative z-20 px-6">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -38,19 +38,19 @@ export default function Contact() {
       >
         <motion.h2
           variants={childVariants}
-          className="font-syne text-[clamp(32px,8vw,90px)] font-normal text-white leading-[1.2] mb-8 md:mb-10"
+          className="font-syne text-[clamp(40px,10vw,90px)] font-normal text-white leading-[1.1] mb-10 md:mb-12"
         >
           Let&apos;s Work <span className="bg-accent text-black px-4 py-0.5 md:px-6 md:py-1 rounded-sm font-bold inline-block transform md:-translate-y-2 shadow-[0_0_20px_rgba(239,255,0,0.4)]">Together</span>
         </motion.h2>
 
         <motion.p
           variants={childVariants}
-          className="font-inter text-[16px] md:text-[18px] text-[#888] max-w-4xl mx-auto leading-relaxed mb-12 md:mb-16 text-center"
+          className="font-inter text-[15px] md:text-[18px] text-[#888] max-w-4xl mx-auto leading-relaxed mb-16 md:mb-20 text-center"
         >
           Currently open to senior/lead full-stack roles in UAE or India. Whether you have an enterprise project or a creative vision to bring to life, I&apos;d love to hear from you.
         </motion.p>
 
-        <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center">
+        <motion.div variants={childVariants} className="flex flex-col sm:flex-row gap-6 md:gap-8 justify-center mb-10 md:mb-0">
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=reah30244@gmail.com"
             target="_blank"
