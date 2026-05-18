@@ -179,13 +179,13 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 78vw;
-  max-width: 960px;
-  height: 160px;
+  width: 75vw;
+  max-width: 1200px;
+  height: 240px;
   overflow: hidden;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr 240px 1fr;
+  grid-template-columns: 1fr 280px 1fr;
   background: white;
   box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
@@ -201,7 +201,7 @@ body {
 /* Left panel */
 .slider-card-left {
   position: relative;
-  height: 160px;
+  height: 240px;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -209,7 +209,7 @@ body {
 /* Thumbnail center panel */
 .slider-card-thumb {
   position: relative;
-  height: 160px;
+  height: 240px;
   overflow: hidden;
   background: #0A0A0A;
 }
@@ -219,7 +219,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 240px;
   overflow: hidden;
   will-change: transform;
 }
@@ -239,7 +239,7 @@ body {
 /* Right panel */
 .slider-card-right {
   position: relative;
-  height: 160px;
+  height: 240px;
   overflow: hidden;
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -250,11 +250,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 160px;
+  height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 22px 28px;
+  padding: 32px 36px;
   will-change: transform;
 }
 
@@ -327,10 +327,10 @@ body {
 @media (max-width: 768px) {
   .slider-card {
     width: 88vw;
-    height: 320px;
+    height: 480px;
     display: grid;
     grid-template-columns: 1fr 120px;
-    grid-template-rows: 160px 160px;
+    grid-template-rows: 240px 240px;
     grid-template-areas:
       "left  thumb"
       "right thumb";
@@ -340,23 +340,23 @@ body {
 
   .slider-card-left {
     grid-area: left;
-    height: 160px;
+    height: 240px;
     border-right: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
   .slider-card-thumb {
     grid-area: thumb;
-    height: 320px;
+    height: 480px;
     overflow: hidden;
     border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Clip thumb to top 160px to avoid double-image during transitions */
+  /* Clip thumb to top 240px to avoid double-image during transitions */
   .slider-card-thumb::after {
     content: '';
     position: absolute;
-    top: 160px;
+    top: 240px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -365,18 +365,19 @@ body {
   }
 
   .slider-thumb-item {
-    height: 160px;
+    height: 240px;
   }
 
   .slider-card-right {
     grid-area: right;
-    height: 160px;
+    height: 240px;
     border-left: none !important;
     border-bottom: none;
   }
 
   .slider-card-info {
-    padding: 18px 20px;
+    padding: 24px 22px;
+    height: 240px;
   }
 
   .slider-card-info--right {

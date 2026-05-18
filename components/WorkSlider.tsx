@@ -62,12 +62,12 @@ const lerp = (start: number, end: number, factor: number) =>
 const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(max, val));
 
+const CARD_HEIGHT = 240; // height of center white card in px — update CSS to match
+
 export default function WorkSlider() {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const activeIndexRef = React.useRef(0);
   const lastTransitionTime = React.useRef(0);
-
-  const CARD_HEIGHT = 160; // height of center white card in px
 
   const state = React.useRef({
     currentY: 0,
