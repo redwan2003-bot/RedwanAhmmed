@@ -62,7 +62,7 @@ const lerp = (start: number, end: number, factor: number) =>
 const clamp = (val: number, min: number, max: number) =>
   Math.max(min, Math.min(max, val));
 
-const CARD_HEIGHT = 240; // height of center white card in px — update CSS to match
+const DEFAULT_CARD_HEIGHT = 240;
 
 export default function WorkSlider() {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -78,8 +78,17 @@ export default function WorkSlider() {
     lastScrollTime: Date.now(),
     dragStart: { y: 0, scrollY: 0 },
     projectHeight: 0,
-    cardHeight: CARD_HEIGHT,
+    cardHeight: DEFAULT_CARD_HEIGHT,
   });
+
+  React.useEffect(() => {
+    const updateCardHeight = () => {
+      state.current.cardHeight = window.innerWidth <= 768 ? 160 : 240;
+    };
+    updateCardHeight();
+    window.addEventListener("resize", updateCardHeight);
+    return () => window.removeEventListener("resize", updateCardHeight);
+  }, []);
 
   const projectsRef = React.useRef<Map<number, HTMLDivElement>>(new Map());
   const thumbRef = React.useRef<Map<number, HTMLDivElement>>(new Map());

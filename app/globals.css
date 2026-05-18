@@ -327,10 +327,10 @@ body {
 @media (max-width: 768px) {
   .slider-card {
     width: 88vw;
-    height: 480px;
+    height: 320px;
     display: grid;
     grid-template-columns: 1fr 120px;
-    grid-template-rows: 240px 240px;
+    grid-template-rows: 160px 160px;
     grid-template-areas:
       "left  thumb"
       "right thumb";
@@ -340,23 +340,23 @@ body {
 
   .slider-card-left {
     grid-area: left;
-    height: 240px;
+    height: 160px;
     border-right: none !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
   .slider-card-thumb {
     grid-area: thumb;
-    height: 480px;
+    height: 320px;
     overflow: hidden;
     border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Clip thumb to top 240px to avoid double-image during transitions */
+  /* Clip thumb to top 160px to avoid double-image during transitions */
   .slider-card-thumb::after {
     content: '';
     position: absolute;
-    top: 240px;
+    top: 160px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -365,19 +365,19 @@ body {
   }
 
   .slider-thumb-item {
-    height: 240px;
+    height: 160px;
   }
 
   .slider-card-right {
     grid-area: right;
-    height: 240px;
+    height: 160px;
     border-left: none !important;
     border-bottom: none;
   }
 
   .slider-card-info {
-    padding: 24px 22px;
-    height: 240px;
+    padding: 18px 20px;
+    height: 160px;
   }
 
   .slider-card-info--right {
