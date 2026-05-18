@@ -349,7 +349,7 @@ export default function WorkSlider() {
                   alt={data.title}
                   fill
                   unoptimized
-                  className="project-bg-image"
+                  className="project-bg-image object-cover"
                   priority={i === 0}
                 />
                 <div className="absolute inset-0 bg-black/45 z-[1]" />
