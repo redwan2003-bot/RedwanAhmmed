@@ -14,6 +14,9 @@ export default function SmoothScroll({
       smoothWheel: true,
     });
 
+    // Expose globally so WorkSlider can pause/resume on wheel capture
+    (window as unknown as Record<string, unknown>).__lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -22,6 +25,7 @@ export default function SmoothScroll({
     requestAnimationFrame(raf);
 
     return () => {
+      (window as unknown as Record<string, unknown>).__lenis = undefined;
       lenis.destroy();
     };
   }, []);

@@ -6,6 +6,8 @@ html, body {
   background: var(--background);
   color: var(--foreground);
   position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 html.lenis {
@@ -142,5 +144,197 @@ body {
   }
   html {
     font-family: var(--font-sans);
+  }
+}
+
+/* ── WorkSlider: Argent Loop Infinite Parallax ── */
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #0A0A0A;
+}
+
+.project-list {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+
+/* ── Center white info card ── */
+.slider-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 960px;
+  height: 160px;
+  overflow: hidden;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  background: white;
+  box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.slider-card:hover {
+  transform: translate(-50%, -52%) scale(1.015);
+  box-shadow: 0 50px 120px -20px rgba(0, 0, 0, 0.95),
+              0 0 40px rgba(232, 255, 0, 0.2);
+}
+
+/* Left panel */
+.slider-card-left {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Thumbnail center panel */
+.slider-card-thumb {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background: #0A0A0A;
+}
+
+.slider-thumb-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.slider-thumb-item img {
+  position: absolute;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 14px;
+  background: #0A0A0A;
+  transform: none !important;
+}
+
+/* Right panel */
+.slider-card-right {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Info items (shared for left and right) */
+.slider-card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 28px;
+  will-change: transform;
+}
+
+.slider-card-info--right {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.slider-text {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  color: #0A0A0A;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.slider-text-muted {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.slider-text-year {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Call-to-action button */
+.slider-link-btn {
+  background: #0A0A0A;
+  color: white;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.slider-link-btn:hover {
+  background: var(--accent); /* Lime green */
+  color: #0A0A0A;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(232, 255, 0, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slider-card {
+    width: 92vw;
+    grid-template-columns: 1fr 120px 1fr;
+  }
+  .slider-card-info {
+    padding: 14px 16px;
+  }
+  .project img {
+    object-position: center top;
   }
 }

@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark", "font-sans", geist.variable)}>
-      <body className={`${syne.variable} ${inter.variable} font-sans antialiased`}>
+    <html lang="en" className={cn("dark", "font-sans", geist.variable)} suppressHydrationWarning>
+      <body className={`${syne.variable} ${inter.variable} font-sans antialiased`} suppressHydrationWarning>
         <SmoothScroll>
           <CustomCursor />
           {children}
