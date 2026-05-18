@@ -326,11 +326,30 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   .slider-card {
-    width: 92vw;
-    grid-template-columns: 1fr 120px 1fr;
+    width: 88vw;
+    height: 480px; /* 160px * 3 rows */
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px; /* Slight rounding for a premium mobile feel */
+  }
+  .slider-card-left,
+  .slider-card-thumb,
+  .slider-card-right {
+    width: 100%;
+    height: 160px;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .slider-card-right {
+    border-bottom: none;
   }
   .slider-card-info {
-    padding: 14px 16px;
+    padding: 24px;
+  }
+  .slider-card-info--right {
+    text-align: left;
+    align-items: flex-start;
   }
   .project img {
     object-position: center top;
