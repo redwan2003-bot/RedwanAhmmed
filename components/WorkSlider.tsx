@@ -3,6 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { BASE_PATH } from "@/lib/utils";
 
 interface ProjectData {
   title: string;
@@ -335,7 +336,7 @@ export default function WorkSlider() {
               {/* Single clean background image (auto-responsive perfect fit) */}
               <div className="absolute inset-0 bg-black">
                 <Image
-                  src={data.image}
+                  src={`${BASE_PATH}${data.image}`}
                   alt={data.title}
                   fill
                   unoptimized
@@ -385,7 +386,7 @@ export default function WorkSlider() {
                 }}
               >
                 <Image
-                  src={data.image}
+                  src={`${BASE_PATH}${data.image}`}
                   alt={data.title}
                   fill
                   unoptimized

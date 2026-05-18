@@ -13,6 +13,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "Redwan Ahmmed | Portfolio",
   description: "Creative developer portfolio built with Next.js, Framer Motion, and Lenis.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
