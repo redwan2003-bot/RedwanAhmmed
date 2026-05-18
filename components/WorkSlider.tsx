@@ -83,7 +83,7 @@ export default function WorkSlider() {
 
   React.useEffect(() => {
     const updateCardHeight = () => {
-      state.current.cardHeight = window.innerWidth <= 768 ? 160 : 240;
+      state.current.cardHeight = window.innerWidth <= 768 ? 320 : 240;
     };
     updateCardHeight();
     window.addEventListener("resize", updateCardHeight);

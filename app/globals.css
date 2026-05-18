@@ -330,19 +330,24 @@ body {
     height: 320px;
     display: grid;
     grid-template-columns: 1fr 120px;
-    grid-template-rows: 160px 160px;
-    grid-template-areas:
-      "left  thumb"
-      "right thumb";
+    grid-template-rows: 320px;
+    grid-template-areas: "text thumb";
     border-radius: 6px;
     overflow: hidden;
   }
 
-  .slider-card-left {
-    grid-area: left;
-    height: 160px;
+  /* Left and Right panels overlap in the same "text" column */
+  .slider-card-left, .slider-card-right {
+    grid-area: text;
+    height: 320px;
     border-right: none !important;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-left: none !important;
+    pointer-events: none; /* Let clicks pass through empty space */
+  }
+
+  /* Re-enable clicks for actual buttons inside */
+  .slider-card-left *, .slider-card-right * {
+    pointer-events: auto;
   }
 
   .slider-card-thumb {
@@ -352,32 +357,23 @@ body {
     border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
   }
 
-  /* Clip thumb to top 160px to avoid double-image during transitions */
-  .slider-card-thumb::after {
-    content: '';
-    position: absolute;
-    top: 160px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    z-index: 5;
-  }
-
   .slider-thumb-item {
-    height: 160px;
-  }
-
-  .slider-card-right {
-    grid-area: right;
-    height: 160px;
-    border-left: none !important;
-    border-bottom: none;
+    height: 320px;
   }
 
   .slider-card-info {
-    padding: 18px 20px;
-    height: 160px;
+    height: 320px;
+  }
+
+  /* Top text sits in the top half */
+  .slider-card-left .slider-card-info {
+    padding: 20px 20px 180px 20px;
+  }
+
+  /* Bottom text sits in the bottom half */
+  .slider-card-right .slider-card-info {
+    padding: 180px 20px 20px 20px;
+    justify-content: flex-end;
   }
 
   .slider-card-info--right {
